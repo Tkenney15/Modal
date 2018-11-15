@@ -7,9 +7,9 @@
 <title>D. Schrute Resume</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="js/script-modal.js"></script>
+<script src="script-modal.js"></script>
 <link rel='stylesheet' href='bootstrap-4.1.3/css/bootstrap.min.css'>
-<link rel="stylesheet" type="text/css" href="css/styles-modal.css">
+<link rel="stylesheet" type="text/css" href="styles-modal.css">
 </head>
 
 <body>
@@ -144,6 +144,25 @@ window.onclick = function(event) {
 
   </ul></p>
 </div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
+
+</script>
 
 
 
